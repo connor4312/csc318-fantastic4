@@ -8,11 +8,10 @@ var minify = false;
 
 
 gulp.task('js', function() {
-    return browserify('./src/js/index.js', { debug: !minify })
-        .transform(require('babelify'))
-        .transform(require('browserify-ngannotate'))
+    return browserify('src/js/app.js', { debug: !minify })
+        .transform(require('babelify'), { presets: ['es2015'] })
         .bundle()
-        .pipe(source('admin.js'))
+        .pipe(source('app.js'))
         .pipe($.if(minify, buffer()))
         .pipe($.if(minify, $.uglify()))
         .pipe(gulp.dest('dist/js'));
