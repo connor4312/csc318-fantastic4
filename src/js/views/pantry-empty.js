@@ -23,7 +23,7 @@ export default class Intro extends View {
 
     static step($step) {
         $step.html(`
-            <p>On this screen, you'll be able to track what food you currently have at home. We've not bought anything yet, though, so head over to the recipt scanner to capture your first purchase.
+            <p>On this screen, you'll be able to track what food you currently have at home. We've not bought anything yet, though, so head over to the recipt scanner to capture your first purchase.</p>
             <h2>Click the <span class="icon icon-plus"></span> in the upper right-hand corner!</h2>
         `);
     }

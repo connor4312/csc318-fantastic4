@@ -1,0 +1,72 @@
+.slide.scanner {
+    .background video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .foreground {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aligner {
+        flex-grow: 1;
+        background: url('../img/picture-framer.png') center center no-repeat;
+    }
+
+    .controls {
+        text-align: center;
+
+        .control {
+            display: inline-block;
+            color: #fff;
+            transform: scale(1);
+            transition: transform 0.2s;
+            cursor: pointer;
+
+            &:before {
+                display: block;
+                font-size: 35px;
+            }
+
+            &:hover {
+                text-decoration: none;
+                transform: scale(0.95);
+            }
+        }
+
+        .primary-action {
+            background: @brand-primary-alt;
+            border-radius: 50%;
+            color: #fff;
+            width: 60px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+
+            &:before {
+                line-height: 60px;
+            }
+        }
+    }
+
+    @keyframes flash {
+        0%    { opacity: 0; }
+        8%    { opacity: 1; }
+        100%  { opacity: 0; }
+    }
+
+    .flash:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 10;
+        background: #fff;
+        animation: flash 800ms 1 linear;
+        animation-fill-mode: forwards;
+    }
+}

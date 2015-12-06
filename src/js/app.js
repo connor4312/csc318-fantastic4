@@ -2,6 +2,7 @@ import $ from 'jquery';
 
 import IntroView from './views/intro';
 import PantryEmptyView from './views/pantry-empty';
+import ScannerView from './views/scanner';
 
 class App {
 
@@ -15,11 +16,11 @@ class App {
 
     setup() {
         this.hasSetup = true;
-        this.currentView = 0;
 
         this.views = [
             IntroView,
             PantryEmptyView,
+            ScannerView,
         ].map((View) => {
             const step = $('<div class="step">');
             View.step(step);
@@ -32,6 +33,7 @@ class App {
         if (!this.hasSetup) {
             this.setup();
         } else {
+            this.view.remove();
             this.$stage.removeClass(this.view.slideClass());
         }
 
@@ -46,7 +48,7 @@ class App {
         this.$steps.find('.step.active').removeClass('active');
         View.step.addClass('active');
 
-        view.render(this.$fore);
+        view.render(this.$fore, this.$stage);
         view.once('goto', (step) => this.render(step));
     }
 }

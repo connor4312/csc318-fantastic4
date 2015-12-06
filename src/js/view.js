@@ -10,4 +10,8 @@ export default class View extends EventEmitter {
             view.emit('goto', parseInt(this.getAttribute('click-to'), 10));
         });
     }
+
+    remove() {
+
+    }
 }
