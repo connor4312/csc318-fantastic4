@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Tomato and Chickpea Soup",
+        "href": "http://www.bonappetit.com/recipe/tomato-and-cannellini-bean-soup",
+        "source": "Bon Apetit",
+        "bullets": [
+            "Prep Time <span>30 Mins</span>",
+            "Cook Time: <span>30 Mins</span>",
+            "Servings: <span>4</span>",
+        ],
+        "ingredients": [
+            { "have": true, "needsUsing": true, "name": "<span class='quantity'>1</span> Onion" },
+            { "have": true, "needsUsing": true, "name": "<span class='quantity'>500g</span> Tomatoes" },
+            { "have": true, "needsUsing": false, "name": "<span class='quantity'>1 cup</span> Dried Beans" },
+            { "have": true, "needsUsing": false, "name": "<span class='quantity'>4</span> Garlic Cloves" },
+            { "have": false, "needsUsing": false, "name": "<span class='quantity'>1</span> Fennel Bulb" }
+        ],
+        "more": 8
+    },
+    {
+        "name": "Kale and Banana Smoothie",
+        "href": "http://allrecipes.com/recipe/173730/kale-and-banana-smoothie/photos/1069114/",
+        "source": "AllRecipies",
+        "bullets": [
+            "Prep Time <span>10 Mins</span>",
+            "Cook Time: <span>5 Mins</span>",
+            "Servings: <span>2</span>",
+        ],
+        "ingredients": [
+            { "have": true, "needsUsing": true, "name": "<span class='quantity'>1</span> Banana" },
+            { "have": true, "needsUsing": true, "name": "<span class='quantity'>1 Head</span> Chopped KAle" },
+            { "have": true, "needsUsing": false, "name": "<span class='quantity'>1 tsp</span> Maple Syrup" },
+            { "have": false, "needsUsing": false, "name": "<span class='quantity'>1 tbps</span> Flax Seeds" },
+            { "have": false, "needsUsing": false, "name": "<span class='quantity'>1/2 cup</span> Unsweetened Soy Milk" }
+        ],
+        "more": 0
+    },
+    {
+        "name": "Tomato and Banana Sambal",
+        "href": "http://www.foodchannel.com/recipes/recipe/tomato-and-banana-sambal/",
+        "source": "The Food Channel",
+        "bullets": [
+            "Prep Time <span>20 Mins</span>",
+            "Cook Time: <span>10 Mins</span>",
+            "Servings: <span>3</span>",
+        ],
+        "ingredients": [
+            { "have": true, "needsUsing": true, "name": "<span class='quantity'>1/2</span> Red Onion" },
+            { "have": true, "needsUsing": true, "name": "<span class='quantity'>3</span> Bananas" },
+            { "have": true, "needsUsing": true, "name": "<span class='quantity'>3</span> Tomatoes" },
+            { "have": true, "needsUsing": false, "name": "<span class='quantity'>1/2 cup</span> beans" },
+            { "have": false, "needsUsing": false, "name": "<span class='quantity'>1/2 tsp</span> Worcester Sauce" }
+        ],
+        "more": 3
+    }
+]

@@ -1,0 +1,67 @@
+.recipes {
+    overflow: hidden;
+    position: relative;
+
+    .recipe {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transition: transform 0.5s;
+    }
+
+    h3 {
+        margin-top: 0;
+    }
+
+    .bullets {
+        padding: 0;
+
+        li {
+            list-style-type: none;
+            text-transform: uppercase;
+            font-size: 1.15em;
+
+            span {
+                display: block;
+                opacity: 0.6;
+                font-size: 0.9em;
+            }
+        }
+    }
+
+    .source {
+        opacity: 0.5;
+    }
+
+    .ingredients {
+        padding-left: 1em;
+
+        li {
+            list-style-type: none;
+            margin-bottom: 4px;
+        }
+
+         .has .icon {
+            margin-left: -2em;
+            width: 2em;
+            display: inline-block;
+            text-align: right;
+            color: green;
+        }
+    }
+
+    .more {
+        opacity: 0.5;
+        font-size: 0.9em;
+        text-align: center;
+    }
+
+    .buttons {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}

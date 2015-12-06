@@ -48,7 +48,7 @@ export default class PantryItems extends View {
             <div class="menu-bottom">
                 <a class="icon icon-help">Suggestions</a>
                 <a class="icon icon-chart">History</a>
-                <a class="icon icon-food">Recipies</a>
+                <a class="icon icon-food" click-to="5">Recipes</a>
             </div>
         `);
 
@@ -64,7 +64,7 @@ export default class PantryItems extends View {
             <h4>after a few days...</h4>
             <p>You managed to scan your receipt and import the food you bought! It's been a few days and, after another trip to the store, you've got more groceries in your pantry.
             <p>But, it looks like you've got food that's going to go bad soon if you don't use it! Fortunately, FoodSmart can provide just the right recommendations to help you use that up in a delicious way. It uses an algorithm based on the steady state of stochastic matrices to find well-rated recipes that optimally make use of your soon-to-expire food.</p>
-            <h2>Click the <span class="icon icon-food"></span> bottom corner for recipes!</h2>
+            <h2>Click the <span class="icon icon-food"></span> in the bottom corner for recipes!</h2>
         `);
     }
 }
