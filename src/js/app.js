@@ -9,6 +9,7 @@ class App extends View {
         super(options);
 
         this.$stage = $('.js-stage-target');
+        this.$fore = this.$stage.find('.foreground');
         this.$steps = $('.js-steps');
 
         this.hasSetup = false;
@@ -32,18 +33,20 @@ class App extends View {
         if (!this.hasSetup) {
             this.setup();
         } else {
+            this.$stage.removeClass(this.view.slideClass());
             this.view.remove();
         }
 
         const View = this.views[step];
         const view = this.view = new View.View();
+        this.$stage.addClass(view.slideClass());
         this.$steps.css(
             'transform',
             'translateY(' + (-View.step.position().top) + 'px)'
         );
 
-        view.render(this.$stage);
-        view.once('transition', (step) => this.render(step));
+        view.render(this.$fore);
+        view.once('goto', (step) => this.render(step));
     }
 }
 

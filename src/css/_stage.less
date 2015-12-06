@@ -1,7 +1,7 @@
 body {
     display: flex;
     min-height: 100vh;
-        overflow: hidden;
+    overflow: hidden;
 }
 
 .stage {
@@ -10,32 +10,53 @@ body {
     width: 1200px;
     display: flex;
     flex-direction: row;
+    align-items: center;
 
-    .contents {
-        display: flex;
-        z-index: 0;
-        position: relative;
-
+    > .contents {
         // screen dimensions in percent on the phone image
+        @ratio: 800 / 1400;
+        @size: 500px;
         @phone-left: 116 / 800;
         @phone-right: 668 / 800;
         @phone-top: 155 / 1400;
         @phone-bottom: 1130 / 1400;
 
-        > img { max-height: 100vh; }
+        display: flex;
+        z-index: 0;
+        position: relative;
+        width: @size;
+        height: @size / @ratio;
 
-        .js-stage-target {
+        .foreground, .phone-screen {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        .phone-screen {
+            background: url('../img/phone.png');
+            background-size: 100% 100%;
+            z-index: 0;
+        }
+
+        .foreground, .background {
+            padding: 40px 20px 20px;
             position: absolute;
             left: @phone-left * 100%;
             right: (1 - @phone-right) * 100%;
             top: @phone-top * 100%;
             bottom: (1 - @phone-bottom) * 100%;
+            z-index: 1;
+        }
+
+        .background {
             z-index: -1;
-            background: #fff;
         }
     }
 
-    .text {
+    > .text {
         .title {
             position: relative;
             padding-bottom: 30px;
@@ -65,6 +86,7 @@ body {
 
         .steps {
             position: relative;
+            height: 60vh;
         }
     }
 }
