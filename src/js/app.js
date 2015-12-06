@@ -3,6 +3,7 @@ import $ from 'jquery';
 import IntroView from './views/intro';
 import PantryEmptyView from './views/pantry-empty';
 import ScannerView from './views/scanner';
+import ScannerReviewView from './views/scanner-review';
 
 class App {
 
@@ -21,6 +22,7 @@ class App {
             IntroView,
             PantryEmptyView,
             ScannerView,
+            ScannerReviewView,
         ].map((View) => {
             const step = $('<div class="step">');
             View.step(step);

@@ -8,7 +8,7 @@ export default class Intro extends View {
                 <h1>My Pantry</h1>
                 <a click-to="2" class="menu-action icon icon-plus"></a>
             </div>
-            <div class="empty-pantry">
+            <div class="empty-pantry page-content">
                 Oh no, your pantry is currently empty!
                 <small>Click <a click-to="2">here</a> to scan a recipt.</small>
             </div>

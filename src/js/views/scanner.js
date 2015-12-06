@@ -10,7 +10,7 @@ export default class Intro extends View {
                 <h1>Receipt Scanner</h1>
                 <a click-to="2" class="menu-action icon icon-close"></a>
             </div>
-            <div class="aligner"></div>
+            <div class="aligner page-content"></div>
             <div class="controls">
                 <div class="col-xs-4">
                     <a class="icon control icon-photos">Photos</a>

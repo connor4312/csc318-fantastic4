@@ -21,14 +21,37 @@
             margin: 0;
         }
 
-        .menu-action {
+        .menu-action:before {
             line-height: @height;
             font-size: @font-size * (2 / 3);
             color: #fff;
+        }
+    }
+
+    .foreground {
+        display: flex;
+        flex-direction: column;
+
+        .page-content {
+            flex-grow: 1;
         }
     }
 }
 
 [click-to] {
     cursor: pointer;
+}
+
+.btn-styled {
+    text-transform: uppercase;
+    font-family: @font-family-sans-serif;
+    letter-spacing: 1px;
+    font-size: 0.95em;
+}
+
+.helper-head {
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+    margin-bottom: 20px;
 }
