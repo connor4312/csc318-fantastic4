@@ -28,22 +28,24 @@ class App extends View {
         });
     }
 
-    render() {
+    render(step) {
         if (!this.hasSetup) {
             this.setup();
         } else {
             this.view.remove();
         }
 
-        const View = this.views[this.currentView];
-        this.view = new View.View().render(this.$stage);
+        const View = this.views[step];
+        const view = this.view = new View.View();
         this.$steps.css(
             'transform',
             'translateY(' + (-View.step.position().top) + 'px)'
         );
 
+        view.render(this.$stage);
+        view.once('transition', (step) => this.render(step));
     }
 }
 
-new App().render();
+new App().render(0);
 
