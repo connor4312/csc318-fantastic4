@@ -6,9 +6,12 @@ export default class Intro extends View {
         $el.html(`
             <div class="menu" >
                 <h1>My Pantry</h1>
-                <a click-to="3" class="menu-action icon icon-plus"></a>
+                <a click-to="2" class="menu-action icon icon-plus"></a>
             </div>
-            <div class="empty-pantry">Your pantry is currently empty!</div>
+            <div class="empty-pantry">
+                Oh no, your pantry is currently empty!
+                <small>Click <a click-to="2">here</a> to scan a recipt.</small>
+            </div>
         `);
 
         this.bindHtml($el);
