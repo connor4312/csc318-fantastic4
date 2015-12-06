@@ -45,6 +45,9 @@ class App extends View {
             'translateY(' + (-View.step.position().top) + 'px)'
         );
 
+        this.$steps.find('.step.active').removeClass('.active');
+        View.step.addClass('active');
+
         view.render(this.$fore);
         view.once('goto', (step) => this.render(step));
     }

@@ -21,6 +21,7 @@ body {
         @phone-top: 155 / 1400;
         @phone-bottom: 1130 / 1400;
 
+        flex-shrink: 0;
         display: flex;
         z-index: 0;
         position: relative;
@@ -83,10 +84,42 @@ body {
                 z-index: -1;
             }
         }
+    }
+}
 
-        .steps {
+
+.steps {
+    position: relative;
+    height: 60vh;
+    margin-top: 30px;
+    font-size: 1.3em;
+
+    .step.active {
+        h2 {
             position: relative;
-            height: 60vh;
+        }
+
+        @keyframes arrow-bounce {
+            0%    { transform: rotate(-45deg) translate(0px, 0px); }
+            50%   { transform: rotate(-45deg) translate(-5px, -5px); }
+            100%  { transform: rotate(-45deg) translate(0px, 0px); }
+        }
+
+        h2:before {
+            @size: 16px;
+
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -30px;
+            width: @size;
+            height: @size;
+            margin: (@size / -2) 0 0;
+            border: 2px solid @brand-primary;
+            border-top: none;
+            border-left: none;
+            transform: rotate(-45deg) translateX(-3px);
+            animation: arrow-bounce 3s infinite cubic-bezier(0.445, 0.050, 0.550, 0.950);
         }
     }
 }
