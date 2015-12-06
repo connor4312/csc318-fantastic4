@@ -1,14 +1,11 @@
-import {View} from 'backbone';
 import $ from 'jquery';
 
 import IntroView from './views/intro';
 import PantryEmptyView from './views/pantry-empty';
 
-class App extends View {
+class App {
 
-    constructor(options) {
-        super(options);
-
+    constructor() {
         this.$stage = $('.js-stage-target');
         this.$fore = this.$stage.find('.foreground');
         this.$steps = $('.js-steps');
@@ -36,7 +33,6 @@ class App extends View {
             this.setup();
         } else {
             this.$stage.removeClass(this.view.slideClass());
-            this.view.remove();
         }
 
         const View = this.views[step];
