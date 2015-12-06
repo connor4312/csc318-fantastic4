@@ -20,19 +20,44 @@
 
 .table-items {
     width: 100%;
-    font-size: 18px;
+
+    &.large {
+        font-size: 18px;
+    }
 
     tr:first-child td {
         border-top: none;
+        padding-top: 0;
     }
 
     .action {
         width: 1em;
         text-align: center;
+
+        a {
+            color: #bbb;
+
+            &:hover {
+                color: #999;
+            }
+        }
     }
 
     .quantity {
         font-size: 0.8em;
         color: @brand-primary;
+    }
+
+    .expiry-heading {
+        font-size: 22px;
+        font-weight: 300;
+        font-family: 'Raleway';
+        border-bottom: 2px solid #ccc;
+        padding-top: 15px;
+        color: #000;
+
+        td {
+            padding-top: 15px;
+        }
     }
 }

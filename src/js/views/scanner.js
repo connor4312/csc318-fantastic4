@@ -2,7 +2,7 @@ import $ from 'jquery';
 
 import View from '../view';
 
-export default class Intro extends View {
+export default class Scanner extends View {
 
     render($el, $container) {
         $el.html(`

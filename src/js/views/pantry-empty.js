@@ -1,6 +1,6 @@
 import View from '../view';
 
-export default class Intro extends View {
+export default class PantryEmpty extends View {
 
     render($el) {
         $el.html(`

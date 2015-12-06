@@ -2,7 +2,7 @@ import $ from 'jquery';
 
 import View from '../view';
 
-export default class Intro extends View {
+export default class ScannerReview extends View {
 
     render($el, $container) {
         const items = [
@@ -16,12 +16,12 @@ export default class Intro extends View {
 
         $el.html(`
             <div class="menu" >
-                <h1>Receipt Scanner: Review</h1>
+                <h1>Receipt Scanner</h1>
                 <a click-to="2" class="menu-action icon icon-close"></a>
             </div>
             <div class="page-content">
-                <p class="helper-head">Here's what we scanned from your receipt. Make corrects if needed, then press <span class="text-primary">Confirm</span>.</p>
-                <table class="table table-items">
+                <p class="helper-head">Here's what we scanned from your receipt. Make corrections if needed, then press <span class="text-primary">Confirm</span>.</p>
+                <table class="table table-items large">
                     <tbody>` + items.map((item) => `
                         <tr>
                             <td>${item[0]} <span class="quantity">${item[1]}</span></td>
@@ -45,10 +45,6 @@ export default class Intro extends View {
         this.bindHtml($el);
     }
 
-    remove() {
-        this.$video.remove();
-    }
-
     slideClass() {
         return 'default';
     }
@@ -56,8 +52,8 @@ export default class Intro extends View {
     static step($step) {
         $step.html(`
             <p>The FoodSmart app used optical character recognition to read the receipt, and matched the items' barcode numbers against its extensive internal database.</p>
-            <p>On this screen, you can correct any entries that we got wrong. But, it looks like the app got everything right here, go ahead and confirm the list!</p>
-            <h2>Click the <span class="text-primary">Confirm</span> button to add the items to your pantry!</h2>
+            <p>On this screen, you can correct any entries that it got wrong. But, it looks like the app got everything right here, so go ahead and confirm the list!</p>
+            <h2>Click <span class="text-primary">Confirm</span> to add the items to your pantry!</h2>
         `);
     }
 }

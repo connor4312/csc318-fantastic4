@@ -4,6 +4,7 @@ import IntroView from './views/intro';
 import PantryEmptyView from './views/pantry-empty';
 import ScannerView from './views/scanner';
 import ScannerReviewView from './views/scanner-review';
+import PantryItemsView from './views/pantry-items';
 
 class App {
 
@@ -23,6 +24,7 @@ class App {
             PantryEmptyView,
             ScannerView,
             ScannerReviewView,
+            PantryItemsView,
         ].map((View) => {
             const step = $('<div class="step">');
             View.step(step);

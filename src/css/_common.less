@@ -12,6 +12,7 @@
         background: @brand-primary;
         margin: -40px -20px 20px;
         padding: 10px;
+        min-height: 50px;
 
         h1 {
             font-size: @font-size;
@@ -34,6 +35,22 @@
 
         .page-content {
             flex-grow: 1;
+            flex-basis: 1px;
+
+            &.fadeout {
+                overflow: hidden;
+                position: relative;
+
+                &:before {
+                    position: absolute;
+                    top: 75%;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    content: "";
+                    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+                }
+            }
         }
     }
 }
@@ -54,4 +71,36 @@
     color: #999;
     text-align: center;
     margin-bottom: 20px;
+}
+
+.menu-bottom {
+    padding: 5px 10px;
+    margin: 20px -20px -20px;
+    background: #148605;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+
+    > * {
+        flex: 1;
+    }
+
+    a {
+        transform: scale(1);
+        transition: transform 0.2s;
+        cursor: pointer;
+        color: #fff;
+
+        &:before {
+            display: block;
+            font-size: 30px;
+            margin-bottom: 4px;
+        }
+
+        &:hover {
+            text-decoration: none;
+            transform: scale(0.95);
+        }
+    }
 }
