@@ -2,6 +2,7 @@ import {View} from 'backbone';
 import $ from 'jquery';
 
 import IntroView from './views/intro';
+import PantryEmptyView from './views/pantry-empty';
 
 class App extends View {
 
@@ -20,7 +21,8 @@ class App extends View {
         this.currentView = 0;
 
         this.views = [
-            IntroView
+            IntroView,
+            PantryEmptyView,
         ].map((View) => {
             const step = $('<div class="step">');
             View.step(step);
@@ -45,7 +47,7 @@ class App extends View {
             'translateY(' + (-View.step.position().top) + 'px)'
         );
 
-        this.$steps.find('.step.active').removeClass('.active');
+        this.$steps.find('.step.active').removeClass('active');
         View.step.addClass('active');
 
         view.render(this.$fore);

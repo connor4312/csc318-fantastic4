@@ -11,6 +11,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    z-index: 0;
 
     > .contents {
         // screen dimensions in percent on the phone image
@@ -23,7 +24,7 @@ body {
 
         flex-shrink: 0;
         display: flex;
-        z-index: 0;
+        z-index: 2;
         position: relative;
         width: @size;
         height: @size / @ratio;
@@ -62,6 +63,7 @@ body {
             position: relative;
             padding-bottom: 30px;
             bottom: 30px 0;
+            z-index: 1;
 
             h1 {
                 font-size: 5em;
@@ -94,32 +96,55 @@ body {
     margin-top: 30px;
     font-size: 1.3em;
 
-    .step.active {
-        h2 {
+    .js-steps {
+        transition: transform 0.8s
+    }
+
+    .step {
+        opacity: 0.1;
+        transition: opacity 0.8s;
+        margin-bottom: 60px;
+
+        .icon {
+            background: @brand-primary;
+            color: #fff;
+            font-size: 0.5em;
+            padding: 0.3em 0.3em 0;
+            margin: 0.1em 0;
             position: relative;
+            top: -0.15em;
+            border-radius: 2px;
         }
 
-        @keyframes arrow-bounce {
-            0%    { transform: rotate(-45deg) translate(0px, 0px); }
-            50%   { transform: rotate(-45deg) translate(-5px, -5px); }
-            100%  { transform: rotate(-45deg) translate(0px, 0px); }
-        }
+        &.active {
+            opacity: 1;
 
-        h2:before {
-            @size: 16px;
+            h2 {
+                position: relative;
+            }
 
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: -30px;
-            width: @size;
-            height: @size;
-            margin: (@size / -2) 0 0;
-            border: 2px solid @brand-primary;
-            border-top: none;
-            border-left: none;
-            transform: rotate(-45deg) translateX(-3px);
-            animation: arrow-bounce 3s infinite cubic-bezier(0.445, 0.050, 0.550, 0.950);
+            @keyframes arrow-bounce {
+                0%    { transform: rotate(-45deg) translate(0px, 0px); }
+                50%   { transform: rotate(-45deg) translate(-5px, -5px); }
+                100%  { transform: rotate(-45deg) translate(0px, 0px); }
+            }
+
+            h2:before {
+                @size: 16px;
+
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: -30px;
+                width: @size;
+                height: @size;
+                margin: (@size / -2) 0 0;
+                border: 2px solid @brand-primary;
+                border-top: none;
+                border-left: none;
+                transform: rotate(-45deg) translateX(-3px);
+                animation: arrow-bounce 3s infinite cubic-bezier(0.445, 0.050, 0.550, 0.950);
+            }
         }
     }
 }
