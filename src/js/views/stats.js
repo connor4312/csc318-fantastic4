@@ -10,8 +10,8 @@ export default class Stats extends View {
             </div>
             <div class="page-content"></div>
             <div class="menu-bottom">
-                <a class="icon icon-help">Suggestions</a>
-                <a class="icon icon-chart">History</a>
+                <a class="icon icon-pantry" click-to="4">Pantry</a>
+                <a class="icon icon-chart" click-to="6">Stats</a>
                 <a class="icon icon-food" click-to="5">Recipes</a>
             </div>
         `);
