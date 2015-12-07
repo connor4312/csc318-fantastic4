@@ -5,21 +5,22 @@ export default class Stats extends View {
     render($el) {
         $el.html(`
             <div class="menu" >
-                <h1>My Stats</h1>
-                <a class="menu-action icon icon-close"></a>
+                <h1>History</h1>
+                <a class="menu-action icon icon-close" click-to="5"></a>
             </div>
             <div class="page-content"></div>
             <div class="menu-bottom">
-                <a class="icon icon-help">Suggestions</a>
-                <a class="icon icon-chart" click-to="7">History</a>
-                <a class="icon icon-food" click-to="5">Recipes</a>
+                <a >Last Week</a>
+                <a >This Month</a>
+                <a >This Year</a>
+                <a >More</a>
             </div>
         `);
         this.bindHtml($el);
     }
 
     slideClass() {
-        return 'stats';
+        return 'history';
     }
 
     static step($step) {

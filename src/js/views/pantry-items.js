@@ -47,7 +47,7 @@ export default class PantryItems extends View {
             </div>
             <div class="menu-bottom">
                 <a class="icon icon-help">Suggestions</a>
-                <a class="icon icon-chart">History</a>
+                <a class="icon icon-chart" click-to="7">History</a>
                 <a class="icon icon-food" click-to="5">Recipes</a>
             </div>
         `);

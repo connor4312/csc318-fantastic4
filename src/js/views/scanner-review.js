@@ -34,7 +34,7 @@ export default class ScannerReview extends View {
             </div>
             <div class="row">
                 <div class="col-xs-5">
-                    <button class="btn btn-lg btn-styled btn-block btn-default">Cancel</button>
+                    <button class="btn btn-lg btn-styled btn-block btn-default" click-to="2">Cancel</button>
                 </div>
                 <div class="col-xs-7">
                     <button class="btn btn-lg btn-styled btn-block btn-primary" click-to="4">Confirm</button>

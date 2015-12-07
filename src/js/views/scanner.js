@@ -8,7 +8,7 @@ export default class Scanner extends View {
         $el.html(`
             <div class="menu" >
                 <h1>Receipt Scanner</h1>
-                <a click-to="2" class="menu-action icon icon-close"></a>
+                <a click-to="1" class="menu-action icon icon-close"></a>
             </div>
             <div class="aligner page-content"></div>
             <div class="controls">
